@@ -23,7 +23,7 @@ BASE_DIR = Path(__file__).resolve().parent.parent
 SECRET_KEY = 'j1c=6$s-dh#$ywt@(q4cm=j&0c*!0x!e-qm6k1%yoliec(15tn'
 
 # Add your hosts to the list.
-ALLOWED_HOSTS = ['localhost', '127.0.0.1']
+ALLOWED_HOSTS = ['django-crm-j528.onrender.com', 'localhost', '127.0.0.1']
 
 # Database
 DATABASES = {
@@ -160,7 +160,6 @@ AUTH_PASSWORD_VALIDATORS = [
 # webcrm/settings.py
 
 # Add your Render URL to this list
-ALLOWED_HOSTS = ['django-crm-j528.onrender.com', 'localhost', '127.0.0.1']
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
