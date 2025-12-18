@@ -40,6 +40,13 @@ def activate_stored_messages_to_user(request: WSGIRequest, profile: UserProfile)
 
 
 def check_user_language(profile: UserProfile) -> None:
+    # ADDED SAFETY CHECK: If profile is None, stop here.
+    if not profile:
+        return
+
+    # Original code continues below...
+    if profile.language_code:
+        translation.activate(profile.language_code)
     cur_language = get_language()
     if cur_language != profile.language_code:
         profile.language_code = cur_language
@@ -91,6 +98,13 @@ def set_user_groups(request: WSGIRequest, groups) -> None:
     
 
 def set_user_timezone(profile: UserProfile) -> None:
+    # ADDED SAFETY CHECK: If profile is None, stop here.
+    if not profile:
+        return
+
+    # Original code continues below...
+    if profile.language_code:
+        translation.activate(profile.language_code)
     utc_timezone = getattr(profile, 'utc_timezone', None)  
     if settings.USE_TZ and utc_timezone:
         if profile.activate_timezone:
