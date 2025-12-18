@@ -157,6 +157,10 @@ AUTH_PASSWORD_VALIDATORS = [
         'NAME': 'django.contrib.auth.password_validation.NumericPasswordValidator'
     }
 ]
+# webcrm/settings.py
+
+# Add your Render URL to this list
+ALLOWED_HOSTS = ['django-crm-j528.onrender.com', 'localhost', '127.0.0.1']
 
 # Static files (CSS, JavaScript, Images)
 STATIC_URL = 'static/'
